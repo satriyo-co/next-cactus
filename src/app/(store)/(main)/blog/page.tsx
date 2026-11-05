@@ -20,7 +20,7 @@ export default async function BlogPage() {
 						{/* Perubahan utama: href mengarah ke post.slug */}
 						<Link href={`/blog/${post.slug}`}>
 							<div className="relative w-full h-48 bg-gray-100">
-								<Image src={`https://picsum.photos/seed/${post.id}/600/400`} alt={post.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+								<Image src={`https://picsum.photos/seed/${post.id + 110}/600/400`} alt={post.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
 							</div>
 
 							<div className="p-5">

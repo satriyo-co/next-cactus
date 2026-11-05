@@ -28,7 +28,7 @@ export default async function PostPage({ params }: PostPageProps) {
 			<article className="bg-white border border-gray-100 rounded-2xl p-6 md:p-8 shadow-sm">
 				{/* Gambar Sampul */}
 				<div className="relative w-full h-64 md:h-96 rounded-xl overflow-hidden mb-6 bg-gray-100">
-					<Image src={`https://picsum.photos/seed/${post.id}/1200/600`} alt={post.title} fill priority className="object-cover" />
+					<Image src={`https://picsum.photos/seed/${post.id + 110}/1200/600`} alt={post.title} fill priority className="object-cover" />
 				</div>
 
 				{/* Badge & Meta Information */}
