@@ -13,10 +13,13 @@ export function NavBar() {
 	const pathname = usePathname();
 	return (
 		<nav aria-label="Navigasi Utama" className="flex gap-4">
-			{links.map((link) => (
-				<Link key={link.href} href={link.href} className={getLinkClassName(pathname, link.href)}>
-					{link.label}
-				</Link>
+			{links.map((link, index) => (
+				<span key={link.href} className="flex items-center gap-4">
+					<Link key={link.href} href={link.href} className={getLinkClassName(pathname, link.href)}>
+						{link.label}
+					</Link>
+					{index < links.length - 1 && <span className="text-gray-500">/</span>}
+				</span>
 			))}
 		</nav>
 	);
