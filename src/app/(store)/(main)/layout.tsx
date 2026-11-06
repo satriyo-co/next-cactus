@@ -27,7 +27,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
         <header className="flex justify-center mb-8 pt-5">
           <Header />
         </header>
-        <div className="max-w-1200px m-auto">
+        <div className="max-w-[1200px] m-auto">
           <div className="px-4 pb-5">
             <AppBreadcrumb />
           </div>
