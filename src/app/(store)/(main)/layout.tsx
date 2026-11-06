@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
-import '@/styles/globals.scss';
+import '@/styles/globals.css';
 import { Geist, Geist_Mono } from 'next/font/google';
+import { AppBreadcrumb } from '@/components/breadcrumb';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -26,7 +27,12 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
         <header className="flex justify-center mb-8 pt-5">
           <Header />
         </header>
-        <div className="wrapper">{children}</div>
+        <div className="max-w-1200px m-auto">
+          <div className="px-4 pb-5">
+            <AppBreadcrumb />
+          </div>
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
